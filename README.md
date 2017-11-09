@@ -1,17 +1,15 @@
-# intel-gatk3-4-germline-snps-indels
-
 ## Intel Optimized GATK-3-4 Germline SNPs and Indels Variant Calling Workflow. 
 
-### WORKFLOW AND TEST FILES
+### WORKFLOWS AND JSONS
 This repository contains a few different files - each tuned for certain requirements. 
 
-├── 2T\_PairedSingleSampleWf\_optimized.inputs.json -> Throughput JSON file
-├── 56T\_PairedSingleSampleWf\_optimized.inputs.20k.json -> 20k test data JSON file
-├── 56T\_PairedSingleSampleWf\_optimized.inputs.json -> Latency JSON file
-├── HDD\_2T\_PairedSingleSampleWf\_optimized.inputs.json -> Throughput JSON file (for HDD)
-├── HDD\_56T\_PairedSingleSampleWf\_optimized.inputs.json -> Latency JSON file (for HDD)
-├── PairedSingleSampleWf\_noqc\_nocram\_optimized.wdl -> WDL optimized for on-prem
-├── PairedSingleSampleWf\_noqc\_nocram\_withcleanup\_optimized.wdl -> WDL optimized for on-prem with cleanup of output results (for throughput analysis)
+├── 2T\_PairedSingleSampleWf\_optimized.inputs.json *&rarr;* Throughput JSON file \
+├── 56T\_PairedSingleSampleWf\_optimized.inputs.20k.json *&rarr;* 20k test data JSON file \
+├── 56T\_PairedSingleSampleWf\_optimized.inputs.json *&rarr;* Latency JSON file \
+├── HDD\_2T\_PairedSingleSampleWf\_optimized.inputs.json *&rarr;* Throughput JSON file (for HDD) \
+├── HDD\_56T\_PairedSingleSampleWf\_optimized.inputs.json *&rarr;* Latency JSON file (for HDD) \
+├── PairedSingleSampleWf\_noqc\_nocram\_optimized.wdl *&rarr;* WDL optimized for on-prem \
+├── PairedSingleSampleWf\_noqc\_nocram\_withcleanup\_optimized.wdl *&rarr;* WDL optimized for on-prem with cleanup of output results (for throughput analysis)
 
 ### DATASETS
 Contact Intel/Broad for access to the WGS data needed for this workflow.

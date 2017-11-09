@@ -37,6 +37,8 @@ In addition to above, the Hybrid workflow uses the latest optimized GATK3.8 jar
 with AVX-512 optimizations and other optimizations which can be obtained from 
 GATK website. 
 
+##placeholder for GATK 3.8 relaese
+
 Lastly, Hybrid workflow also needs a tool called "VerifyBamID" that can be 
 downloaded as follows: 
 

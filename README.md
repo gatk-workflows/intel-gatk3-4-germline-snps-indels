@@ -11,6 +11,12 @@ This repository contains a few different files - each tuned for certain requirem
 ├── PairedSingleSampleWf\_noqc\_nocram\_optimized.wdl *&rarr;* WDL optimized for on-prem \
 ├── PairedSingleSampleWf\_noqc\_nocram\_withcleanup\_optimized.wdl *&rarr;* WDL optimized for on-prem with cleanup of output results (for throughput analysis)
 
+For the PairedSingleSampleWf\_noqc\_nocram\_optimized.wdl file, modify [Line 1270](https://github.com/gatk-workflows/intel-gatk3-4-germline-snps-indels/blob/master/PairedSingleSampleWf_noqc_nocram_optimized.wdl#L1270) to the path where datasets reside in your cluster.
+
+For the PairedSingleSampleWf\_noqc\_nocram\_withcleanup\_optimized.wdl file, modify [Line 1317](https://github.com/gatk-workflows/intel-gatk3-4-germline-snps-indels/blob/master/PairedSingleSampleWf_noqc_nocram_withcleanup_optimized.wdl#L1317) to the path where datasets reside in your cluster.
+
+In the JSON files, modify the paths to the datasets and tools where they reside in your cluster.
+
 ### DATASETS
 Contact Intel/Broad for access to the WGS data needed for this workflow.
 
@@ -33,11 +39,8 @@ root@54754360159e:/usr/gitc# cp /usr/local/bin/samtools gatk4 bwa picard.jar /pa
 root@54754360159e:/usr/gitc# exit
 ```
 
-In addition to above, the Hybrid workflow uses the latest optimized GATK3.8 jar 
-with AVX-512 optimizations and other optimizations which can be obtained from 
-GATK website. 
-
-##placeholder for GATK 3.8 relaese
+In addition to above, this workflow uses the latest optimized GATK 3.8-1 jar \
+with optimizations which can be obtained from [GATK website](https://software.broadinstitute.org/gatk/download/).
 
 Lastly, Hybrid workflow also needs a tool called "VerifyBamID" that can be 
 downloaded as follows: 

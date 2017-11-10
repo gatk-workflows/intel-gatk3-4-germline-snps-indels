@@ -35,7 +35,7 @@ and put you within the container from where you can copy the tools needed for
 the workflow. 
 
 ```
-root@54754360159e:/usr/gitc# cp /usr/local/bin/samtools gatk4 bwa picard.jar /path/to/shared_filesystem
+root@54754360159e:/usr/gitc# cp -r /usr/local/bin/samtools gatk4 bwa picard.jar /path/to/shared_filesystem
 root@54754360159e:/usr/gitc# exit
 ```
 

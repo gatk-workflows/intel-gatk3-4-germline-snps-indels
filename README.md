@@ -20,10 +20,9 @@ In the JSON files, modify the paths to the datasets and tools where they reside 
 #### FPGA CHANGES
 Assuming the environemnt has been setup to offload the pairhmm kernel of HaplotypeCaller to FPGA - the below changes must be enabled in the WDL/JSON files (based on the comments) to make use of the FPGA. 
 
-a. In the WDL file, for task Haplotype Caller runtime section, uncomment the line:
-require\_fpga: "yes"
+   a. In the WDL file, for task Haplotype Caller runtime section, uncomment the line: `require_fpga: "yes"`
 
-b. In the JSON file, change the "PairedEndSingleSampleWorkflow.gatk\_gkl\_pairhmm\_implementation" to “VECTOR\_LOGLESS\_CACHING\_FPGA\_EXPERIMENTAL” from “VECTOR\_LOGLESS\_CACHING”.
+   b. In the JSON file, change the `"PairedEndSingleSampleWorkflow.gatk_gkl_pairhmm_implementation"` from `"VECTOR_LOGLESS_CACHING"` to `"VECTOR_LOGLESS_CACHING_FPGA_EXPERIMENTAL"`.
 
 Refer to: [WDL](https://github.com/gatk-workflows/intel-gatk3-4-germline-snps-indels/blob/master/PairedSingleSampleWf_noqc_nocram_optimized.wdl#L989-L991) and [JSON](https://github.com/gatk-workflows/intel-gatk3-4-germline-snps-indels/blob/master/56T_PairedSingleSampleWf_optimized.inputs.json#L79-L80) examples.
 

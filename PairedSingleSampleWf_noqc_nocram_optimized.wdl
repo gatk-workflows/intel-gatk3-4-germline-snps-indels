@@ -986,6 +986,9 @@ task HaplotypeCaller {
   runtime {
     memory: memory
     cpu: cpu
+    #Use the below argument if your environment is setup to take advantage of FPGA for PAIRHMM KERNEL. 
+    #In addition, you will need to enable the gatk_gkl_pairhmm_implementation argument to use VECTOR_LOGLESS_CACHING_FPGA_EXPERIMENTAL. 
+    #require_fpga: "yes"
   }
   output {
     File output_gvcf = "${gvcf_basename}.vcf.gz"

@@ -17,6 +17,18 @@ For the PairedSingleSampleWf\_noqc\_nocram\_withcleanup\_optimized.wdl file, mod
 
 In the JSON files, modify the paths to the datasets and tools where they reside in your cluster.
 
+#### FPGA CHANGES
+Assuming the environemnt has been setup to offload the pairhmm kernel of HaplotypeCaller to FPGA - the below changes must be enabled in the WDL/JSON files (based on the comments) to make use of the FPGA. 
+
+a. In the WDL file, for task Haplotype Caller runtime section, uncomment the line:
+require\_fpga: "yes"
+
+b. In the JSON file, change the "PairedEndSingleSampleWorkflow.gatk\_gkl\_pairhmm\_implementation" to “VECTOR\_LOGLESS\_CACHING\_FPGA\_EXPERIMENTAL” from “VECTOR\_LOGLESS\_CACHING”.
+
+==============================
+
+
+
 ### DATASETS
 Contact Intel/Broad for access to the WGS data needed for this workflow.
 
@@ -40,7 +52,7 @@ root@54754360159e:/usr/gitc# exit
 ```
 
 In addition to above, this workflow uses the latest optimized GATK 3.8-1 jar \
-with optimizations which can be obtained from [GATK website](https://software.broadinstitute.org/gatk/download/).
+with optimizations which can be obtained from [GATK archive website](https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.8-1-0-gf15c1c3ef).
 
 Lastly, Hybrid workflow also needs a tool called "VerifyBamID" that can be 
 downloaded as follows: 

@@ -25,9 +25,7 @@ require\_fpga: "yes"
 
 b. In the JSON file, change the "PairedEndSingleSampleWorkflow.gatk\_gkl\_pairhmm\_implementation" to “VECTOR\_LOGLESS\_CACHING\_FPGA\_EXPERIMENTAL” from “VECTOR\_LOGLESS\_CACHING”.
 
-==============================
-
-
+Refer to: [WDL](https://github.com/gatk-workflows/intel-gatk3-4-germline-snps-indels/blob/master/PairedSingleSampleWf_noqc_nocram_optimized.wdl#L989-L991) and [JSON](https://github.com/gatk-workflows/intel-gatk3-4-germline-snps-indels/blob/master/56T_PairedSingleSampleWf_optimized.inputs.json#L79-L80) examples.
 
 ### DATASETS
 Contact Intel/Broad for access to the WGS data needed for this workflow.

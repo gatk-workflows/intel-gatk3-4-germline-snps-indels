@@ -76,6 +76,7 @@
   "## GENERAL_COMMENT": "Compression level for all java commands",
   "PairedEndSingleSampleWorkflow.compression_level":1,
   "## HaplotypeCaller_MT_comment": "See comment in the WDL file",
+  "## HaplotypeCaller_FPGA_comment": "If using FPGA, change below VECTOR_LOGLESS_CACHING to VECTOR_LOGLESS_CACHING_FPGA_EXPERIMENTAL",
   "PairedEndSingleSampleWorkflow.gatk_gkl_pairhmm_implementation":"VECTOR_LOGLESS_CACHING",
   "PairedEndSingleSampleWorkflow.gatk_gkl_pairhmm_threads":1,
   "##COMMENT_TMPDIR": "defaults to /tmp, BUT you might want to customize this. For example, if your working directory is on an NVMe SSD",
